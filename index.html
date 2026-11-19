@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Convertidor de Números Binarios</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Fondo negro con cuadrícula y destellos RGB -->
+  <div class="fondo-rgb"></div>
+
+  <main class="contenedor-principal">
+    
+    <!-- VISTA 1: MENU PRINCIPAL (Equivalente a MenuPrincipal.java) -->
+    <section id="vistaMenuPrincipal" class="tarjeta-rgb vista-activa">
+      <div class="contenido-tarjeta">
+        <header>
+          <h1 class="titulo-neon">Sistema Convertidor de Números Binarios</h1>
+          <p class="subtitulo">Aprende, practica y domina el sistema binario</p>
+        </header>
+
+        <nav class="menu-botones">
+          <button id="btnAprendeConIA" class="btn-menu btn-cian" type="button">
+            Aprende con IA
+          </button>
+          <button id="btnPractica" class="btn-menu btn-cian" type="button">
+            Práctica
+          </button>
+          <button id="btnSalir" class="btn-menu btn-cian" type="button">
+            Salir
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- VISTA 2: PRÁCTICA (Equivalente a Practica.java) -->
+    <section id="vistaPractica" class="tarjeta-rgb vista-oculta">
+      <div class="contenido-tarjeta">
+        <header>
+          <h2 class="titulo-lavanda">Práctica</h2>
+        </header>
+
+        <div class="fila-control">
+          <label for="txtNumero" class="etiqueta-lavanda">
+            Generador de números decimales al azar:
+          </label>
+          <div class="grupo-input">
+            <button id="btnGenerarNumero" class="btn-practica" type="button">
+              Generar
+            </button>
+            <input type="text" id="txtNumero" readonly placeholder="---" aria-label="Número decimal generado">
+          </div>
+        </div>
+
+        <div class="fila-control">
+          <label for="txtNumeroBinario" class="etiqueta-lavanda">
+            Ingresa la conversión a número binario:
+          </label>
+          <input type="text" id="txtNumeroBinario" placeholder="Ej. 10110" autocomplete="off">
+        </div>
+
+        <div class="zona-resultados">
+          <textarea id="txtAreaComprobar" rows="11" readonly placeholder="Aquí aparecerá la evaluación y el paso a paso de las divisiones entre 2..."></textarea>
+
+          <div class="columna-botones">
+            <button id="btnComprueba" class="btn-practica" type="button">
+              Comprobar
+            </button>
+            <button id="btnLimpia" class="btn-practica" type="button">
+              Limpiar
+            </button>
+            <button id="btnDescargarTxt" class="btn-practica btn-secundario" type="button" title="Descarga historialPracticas.txt">
+              Descargar .TXT
+            </button>
+            <button id="btnRegresa" class="btn-practica" type="button">
+              Regresar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
